@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="825.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c19project.FXMLDocumentController">
+    <children>
+      <TableView fx:id="tableAffichage" layoutX="14.0" layoutY="132.0" onSort="#locationBox" prefHeight="495.0" prefWidth="800.0" style="-fx-border-color: red;">
+        <columns>
+          <TableColumn id="continent" fx:id="continent" prefWidth="108.79998779296875" style="-fx-border-color: red;" text="Continent" />
+            <TableColumn id="location" fx:id="location" prefWidth="112.800048828125" style="-fx-border-color: red;" text="location" />
+            <TableColumn id="date" fx:id="date" prefWidth="104.79998779296875" style="-fx-border-color: red;" text="date" />
+            <TableColumn id="total_cases" fx:id="total_cases" prefWidth="119.20001220703125" style="-fx-border-color: red;" text="total Cases" />
+            <TableColumn id="total_tests" fx:id="total_tests" prefWidth="108.800048828125" style="-fx-border-color: red;" text="Total Tests" />
+            <TableColumn id="total_deaths" fx:id="total_deaths" prefWidth="106.0" style="-fx-border-color: red;" text="totalDeaths" />
+            <TableColumn id="total_vaccinations" fx:id="total_vaccinations" prefWidth="144.0" style="-fx-border-color: red;" text="Total Vaccinations" />
+        </columns>
+         <effect>
+            <Blend />
+         </effect>
+      </TableView>
+      <ComboBox id="locationsBox" fx:id="locationsBox" layoutX="564.0" layoutY="67.0" onAction="#locationBox" prefHeight="25.0" prefWidth="193.0" promptText="ALL" style="-fx-background-color: grey;">
+         <effect>
+            <SepiaTone />
+         </effect></ComboBox>
+      <ComboBox id="continentsBox" fx:id="continentsBox" layoutX="154.0" layoutY="67.0" onAction="#continentBox" prefHeight="25.0" prefWidth="193.0" promptText="ALL" style="-fx-background-color: grey;">
+         <effect>
+            <SepiaTone />
+         </effect></ComboBox>
+      <Label layoutX="56.0" layoutY="71.0" prefHeight="18.0" prefWidth="84.0" text="Continent" textFill="#c32828">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="433.0" layoutY="73.0" prefHeight="18.0" prefWidth="84.0" text="Location" textAlignment="CENTER" textFill="#cd5454">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.84">
+               <input>
+                  <Blend />
+               </input>
+            </SepiaTone>
+         </effect>
+      </Label>
+      
+      
+    </children>
+</AnchorPane>

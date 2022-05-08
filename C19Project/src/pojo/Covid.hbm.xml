@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21 juin 2021 11:06:58 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.Covid" table="covid" catalog="covid19" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <property name="isoCode" type="string">
+            <column name="iso_code" length="65535" />
+        </property>
+        <property name="continent" type="string">
+            <column name="continent" length="65535" />
+        </property>
+        <property name="location" type="string">
+            <column name="location" length="65535" />
+        </property>
+        <property name="date" type="string">
+            <column name="date" length="65535" />
+        </property>
+        <property name="totalCases" type="string">
+            <column name="total_cases" length="65535" />
+        </property>
+        <property name="newCases" type="string">
+            <column name="new_cases" length="65535" />
+        </property>
+        <property name="newCasesSmoothed" type="string">
+            <column name="new_cases_smoothed" length="65535" />
+        </property>
+        <property name="totalDeaths" type="string">
+            <column name="total_deaths" length="65535" />
+        </property>
+        <property name="newDeaths" type="string">
+            <column name="new_deaths" length="65535" />
+        </property>
+        <property name="newDeathsSmoothed" type="string">
+            <column name="new_deaths_smoothed" length="65535" />
+        </property>
+        <property name="totalCasesPerMillion" type="string">
+            <column name="total_cases_per_million" length="65535" />
+        </property>
+        <property name="newCasesPerMillion" type="string">
+            <column name="new_cases_per_million" length="65535" />
+        </property>
+        <property name="newCasesSmoothedPerMillion" type="string">
+            <column name="new_cases_smoothed_per_million" length="65535" />
+        </property>
+        <property name="totalDeathsPerMillion" type="string">
+            <column name="total_deaths_per_million" length="65535" />
+        </property>
+        <property name="newDeathsPerMillion" type="string">
+            <column name="new_deaths_per_million" length="65535" />
+        </property>
+        <property name="newDeathsSmoothedPerMillion" type="string">
+            <column name="new_deaths_smoothed_per_million" length="65535" />
+        </property>
+        <property name="reproductionRate" type="string">
+            <column name="reproduction_rate" length="65535" />
+        </property>
+        <property name="icuPatients" type="string">
+            <column name="icu_patients" length="65535" />
+        </property>
+        <property name="icuPatientsPerMillion" type="string">
+            <column name="icu_patients_per_million" length="65535" />
+        </property>
+        <property name="hospPatients" type="string">
+            <column name="hosp_patients" length="65535" />
+        </property>
+        <property name="hospPatientsPerMillion" type="string">
+            <column name="hosp_patients_per_million" length="65535" />
+        </property>
+        <property name="weeklyIcuAdmissions" type="string">
+            <column name="weekly_icu_admissions" length="65535" />
+        </property>
+        <property name="weeklyIcuAdmissionsPerMillion" type="string">
+            <column name="weekly_icu_admissions_per_million" length="65535" />
+        </property>
+        <property name="weeklyHospAdmissions" type="string">
+            <column name="weekly_hosp_admissions" length="65535" />
+        </property>
+        <property name="weeklyHospAdmissionsPerMillion" type="string">
+            <column name="weekly_hosp_admissions_per_million" length="65535" />
+        </property>
+        <property name="newTests" type="string">
+            <column name="new_tests" length="65535" />
+        </property>
+        <property name="totalTests" type="string">
+            <column name="total_tests" length="65535" />
+        </property>
+        <property name="totalTestsPerThousand" type="string">
+            <column name="total_tests_per_thousand" length="65535" />
+        </property>
+        <property name="newTestsPerThousand" type="string">
+            <column name="new_tests_per_thousand" length="65535" />
+        </property>
+        <property name="newTestsSmoothed" type="string">
+            <column name="new_tests_smoothed" length="65535" />
+        </property>
+        <property name="newTestsSmoothedPerThousand" type="string">
+            <column name="new_tests_smoothed_per_thousand" length="65535" />
+        </property>
+        <property name="positiveRate" type="string">
+            <column name="positive_rate" length="65535" />
+        </property>
+        <property name="testsPerCase" type="string">
+            <column name="tests_per_case" length="65535" />
+        </property>
+        <property name="testsUnits" type="string">
+            <column name="tests_units" length="65535" />
+        </property>
+        <property name="totalVaccinations" type="string">
+            <column name="total_vaccinations" length="65535" />
+        </property>
+        <property name="peopleVaccinated" type="string">
+            <column name="people_vaccinated" length="65535" />
+        </property>
+        <property name="peopleFullyVaccinated" type="string">
+            <column name="people_fully_vaccinated" length="65535" />
+        </property>
+        <property name="newVaccinations" type="string">
+            <column name="new_vaccinations" length="65535" />
+        </property>
+        <property name="newVaccinationsSmoothed" type="string">
+            <column name="new_vaccinations_smoothed" length="65535" />
+        </property>
+        <property name="totalVaccinationsPerHundred" type="string">
+            <column name="total_vaccinations_per_hundred" length="65535" />
+        </property>
+        <property name="peopleVaccinatedPerHundred" type="string">
+            <column name="people_vaccinated_per_hundred" length="65535" />
+        </property>
+        <property name="peopleFullyVaccinatedPerHundred" type="string">
+            <column name="people_fully_vaccinated_per_hundred" length="65535" />
+        </property>
+        <property name="newVaccinationsSmoothedPerMillion" type="string">
+            <column name="new_vaccinations_smoothed_per_million" length="65535" />
+        </property>
+        <property name="stringencyIndex" type="string">
+            <column name="stringency_index" length="65535" />
+        </property>
+        <property name="population" type="string">
+            <column name="population" length="65535" />
+        </property>
+        <property name="populationDensity" type="string">
+            <column name="population_density" length="65535" />
+        </property>
+        <property name="medianAge" type="string">
+            <column name="median_age" length="65535" />
+        </property>
+        <property name="aged65Older" type="string">
+            <column name="aged_65_older" length="65535" />
+        </property>
+        <property name="aged70Older" type="string">
+            <column name="aged_70_older" length="65535" />
+        </property>
+        <property name="gdpPerCapita" type="string">
+            <column name="gdp_per_capita" length="65535" />
+        </property>
+        <property name="extremePoverty" type="string">
+            <column name="extreme_poverty" length="65535" />
+        </property>
+        <property name="cardiovascDeathRate" type="string">
+            <column name="cardiovasc_death_rate" length="65535" />
+        </property>
+        <property name="diabetesPrevalence" type="string">
+            <column name="diabetes_prevalence" length="65535" />
+        </property>
+        <property name="femaleSmokers" type="string">
+            <column name="female_smokers" length="65535" />
+        </property>
+        <property name="maleSmokers" type="string">
+            <column name="male_smokers" length="65535" />
+        </property>
+        <property name="handwashingFacilities" type="string">
+            <column name="handwashing_facilities" length="65535" />
+        </property>
+        <property name="hospitalBedsPerThousand" type="string">
+            <column name="hospital_beds_per_thousand" length="65535" />
+        </property>
+        <property name="lifeExpectancy" type="string">
+            <column name="life_expectancy" length="65535" />
+        </property>
+        <property name="humanDevelopmentIndex" type="string">
+            <column name="human_development_index" length="65535" />
+        </property>
+        <property name="excessMortality" type="string">
+            <column name="excess_mortality" length="65535" />
+        </property>
+    </class>
+</hibernate-mapping>
